@@ -1,0 +1,71 @@
+client/
+│── public/                 # Static files (favicon, index.html)
+│── src/
+│   ├── assets/             # Images, icons, and styles
+│   ├── components/         # Reusable UI components
+│   │   ├── Navbar.js
+│   │   ├── Footer.js
+│   │   ├── PlanCard.js
+│   │   ├── CheckoutForm.js
+│   │   ├── ProtectedRoute.js
+│   │   ├── UserTable.js
+│   ├── context/            # Context API for authentication & state management
+│   │   ├── AuthContext.js
+│   │   ├── PlanContext.js
+│   ├── pages/              # Main pages of the application
+│   │   ├── Home.js
+│   │   ├── Login.js
+│   │   ├── Register.js
+│   │   ├── Plans.js
+│   │   ├── Checkout.js
+│   │   ├── Dashboard.js
+│   │   ├── AdminDashboard.js
+│   │   ├── SuperAdminDashboard.js
+│   │   ├── OrderHistory.js
+│   ├── services/           # API calls to the backend
+│   │   ├── authService.js
+│   │   ├── planService.js
+│   │   ├── paymentService.js
+│   ├── App.js              # Main App component
+│   ├── index.js            # Entry point
+│── tailwind.config.js       # Tailwind CSS configuration
+│── package.json            # Dependencies and scripts
+│── .env                    # Environment variables
+
+
+
+
+
+
+
+
+
+server/
+│── src/
+│   ├── config/              # Configuration files (DB, environment variables)
+│   │   ├── db.js            # MongoDB connection
+│   │   ├── stripe.js        # Stripe configuration
+│   ├── controllers/         # Business logic for each feature
+│   │   ├── authController.js
+│   │   ├── planController.js
+│   │   ├── paymentController.js
+│   │   ├── userController.js
+│   ├── models/              # Mongoose schemas for database
+│   │   ├── User.js
+│   │   ├── Plan.js
+│   │   ├── Payment.js
+│   ├── middleware/          # Authentication & error handling
+│   │   ├── authMiddleware.js
+│   │   ├── roleMiddleware.js
+│   ├── routes/              # API routes
+│   │   ├── authRoutes.js
+│   │   ├── planRoutes.js
+│   │   ├── paymentRoutes.js
+│   │   ├── userRoutes.js
+│   ├── utils/               # Utility functions
+│   │   ├── jwtUtils.js       # JWT token functions
+│   ├── app.js               # Express app setup
+│   ├── server.js            # Server entry point
+│── .env                     # Environment variables
+│── package.json             # Dependencies and scripts
+│── README.md                # Project documentation
