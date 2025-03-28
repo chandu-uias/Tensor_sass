@@ -23,7 +23,6 @@ This is a **SaaS Plan Management System** built for **TensorGo Technologies**, e
   - Users: Access the purchased plan.
 - **Stripe Integration**:
   - Secure payment processing.
-  - Handle webhooks to confirm successful transactions.
 - **Role-Based Access Control (RBAC)** for better security and feature control.
 
 ---
