@@ -1,5 +1,5 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
-
+const YOUR_CLIENT_URL = process.env.CLIENT_URL;
 // Create a Stripe checkout session
 const createCheckoutSession = async (products) => {
   const lineItems = products.map((product) => ({
@@ -18,8 +18,10 @@ const createCheckoutSession = async (products) => {
       payment_method_types: ["card"],
       line_items: lineItems,
       mode: "payment",
-      success_url: "http://localhost:5173/success",
-      cancel_url: "http://localhost:5173/cancel",
+      success_url: `${YOUR_CLIENT_URL}/success`,
+      cancel_url: `${YOUR_CLIENT_URL}/cancel`,
+      // success_url: "http://localhost:5173/success",
+      // cancel_url: "http://localhost:5173/cancel",
     });
 
     return { id: session.id };

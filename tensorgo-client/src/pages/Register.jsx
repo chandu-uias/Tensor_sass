@@ -3,8 +3,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import "../styles/register.css";
-
-axios.defaults.baseURL = import.meta.env.VITE_REACT_APP_SERVER_DOMAIN || "http://localhost:8080";
+axios.defaults.baseURL = import.meta.env.VITE_SERVER_DOMAIN;
+// axios.defaults.baseURL = import.meta.env.VITE_REACT_APP_SERVER_DOMAIN || "http://localhost:8080";
 
 function Register() {
   const [selectedRole, setSelectedRole] = useState("");

@@ -4,10 +4,11 @@ import "../styles/register.css";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
+axios.defaults.baseURL = import.meta.env.VITE_SERVER_DOMAIN;
 
 
-axios.defaults.baseURL = import.meta.env.VITE_REACT_APP_SERVER_DOMAIN || "http://localhost:8080";
-// console.log("Server Domain:", axios.defaults.baseURL);
+// axios.defaults.baseURL = import.meta.env.VITE_REACT_APP_SERVER_DOMAIN || "http://localhost:8080";
+console.log("Server Domain:", axios.defaults.baseURL);
 
 function Login() {
   

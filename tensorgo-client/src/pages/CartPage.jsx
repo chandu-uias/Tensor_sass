@@ -3,6 +3,8 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
+axios.defaults.baseURL = import.meta.env.VITE_SERVER_DOMAIN;
 // import "./Plans.css";
 // import "./Users.css"; // Ensure this file contains necessary styles
 
@@ -38,7 +40,7 @@ const CartPage = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:8080/api/create-checkout-session", {
+      const response = await fetch(`${axios.defaults.baseURL}/api/create-checkout-session`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

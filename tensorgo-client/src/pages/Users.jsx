@@ -3,8 +3,8 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Users.css"; // Import CSS file
-
-axios.defaults.baseURL = import.meta.env.VITE_REACT_APP_SERVER_DOMAIN || "http://localhost:8080";
+axios.defaults.baseURL = import.meta.env.VITE_SERVER_DOMAIN;
+// axios.defaults.baseURL = import.meta.env.VITE_REACT_APP_SERVER_DOMAIN || "http://localhost:8080";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
