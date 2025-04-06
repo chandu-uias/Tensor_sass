@@ -16,7 +16,15 @@ const app = express();
 const port = process.env.PORT || 5015;
 
 
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+     //origin:"https://omnify-task-cqej.vercel.app/"
+      origin:"*",
+      methods: "GET,POST,PUT,DELETE",
+      credentials: true 
+  })
+);
 app.use(express.json());
 
 
