@@ -17,14 +17,23 @@ const port = process.env.PORT || 5015;
 
 
 // app.use(cors());
+// app.use(
+//   cors({
+     
+//       origin:"*",
+//       methods: "GET,POST,PUT,DELETE",
+//       credentials: true 
+//   })
+// );
+
 app.use(
   cors({
-     
-      origin:"*",
-      methods: "GET,POST,PUT,DELETE",
-      credentials: true 
+    origin: "https://tensor-sass.vercel.app", // ✅ Exact frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
   })
 );
+
 app.use(express.json());
 
 
